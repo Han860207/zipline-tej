@@ -134,8 +134,6 @@ exclude = ['tests*']
 
 [tool.setuptools_scm]
 write_to = "src/zipline/_version.py"
-version_scheme = 'no-guess-dev'
-local_scheme = 'no-local-version'
 
 
 [tool.setuptools.package-data]
