@@ -72,12 +72,12 @@ dependencies = [
 
 [project.urls]
 homepage = 'https://api.tej.com.tw'
-repository = 'https://github.com/tejtw/zipline-tej'
+repository = 'https://github.com/Han860207/zipline-tej'
 
 [build-system]
 requires = [
     'setuptools>=42.0.0',
-    "setuptools_scm[toml]>=6.2 ,<8",
+    "setuptools_scm[toml]>=6.2",
     'wheel>=0.36.0',
     'Cython>=0.29.21,<3',
     'oldest-supported-numpy; python_version>="3.8"',
