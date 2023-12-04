@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest , windows-latest, macos-latest ]
-        python: [ "cp38", "cp39", "cp310", "cp311" ]
+        python: [ "cp38" ]
         arch: [ auto64 ]
 
     steps:
@@ -107,8 +107,8 @@ jobs:
       #     password: ${{ secrets.TEST_PYPI_API_TOKEN }}
       #     repository_url: https://test.pypi.org/legacy/
 
-      - name: publish to pypi
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
+      # - name: publish to pypi
+      #   uses: pypa/gh-action-pypi-publish@release/v1
+      #   with:
+      #     user: __token__
+      #     password: ${{ secrets.PYPI_TOKEN }}
