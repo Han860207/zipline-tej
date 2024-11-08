@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ windows-latest, macos-latest, ubuntu-latest ]
+        os: [ ubuntu-latest ]
         python: [ "cp38", "cp39", "cp310", "cp311", "cp312" ]
         arch: [ auto64 ]
 
@@ -100,15 +100,15 @@ jobs:
           name: artifact
           path: dist
 
-      # - name: publish to testpypi
-      #   uses: pypa/gh-action-pypi-publish@release/v1
-      #   with:
-      #     user: __token__
-      #     password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-      #     repository_url: https://test.pypi.org/legacy/
-
-      - name: publish to pypi
+      - name: publish to testpypi
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+
+      # - name: publish to pypi
+      #   uses: pypa/gh-action-pypi-publish@release/v1
+      #   with:
+      #     user: __token__
+      #     password: ${{ secrets.PYPI_TOKEN }}
